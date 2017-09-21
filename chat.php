@@ -19,7 +19,7 @@
       function ajax() {
         var chatBox;
         var req = new XMLHttpRequest();
-        chatBox = document.querySelector('#chat');
+        chatBox = document.querySelector('#caja-chat');
         req.onreadystatechange = function() {
           if (req.readyState == 4 && req.status == 200) {
             document.getElementById('chat').innerHTML =req.responseText;
@@ -33,7 +33,7 @@
 
       setInterval(function(){
         ajax();
-      },1000);
+      },);
     </script>
   </head>
   <body onload="ajax(); document.getElementById('mensaje').focus()">
@@ -42,7 +42,7 @@
       <h1 class="titulo col-md-offset-4">Chat live</h1>
       <div id="caja-chat">
         <div class="infinite-list">
-          <div id="chat" style="width:400px; height:400px; overflow-y: auto; z-index:1; position:fixed;">
+          <div id="chat">
 
           </div>
         </div>
